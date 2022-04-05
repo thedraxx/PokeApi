@@ -9,7 +9,7 @@ export const MostrarPokemons = ({ pokemon }) => {
   width: "18rem",
   backgroundColor: "#fdfdfd",
   boxShadow: "1.5px 3px 7px black",
-  background: 'linear-gradient(150deg, rgba(2,0,36,1) 0%, #fffaf5 0%, #ffd8ab 100%)',
+  background: 'linear-gradient(150deg, rgba(2,0,36,1) 0%, #ffffff 0%, #ffcd95 100%)',
   borderRadius: "40px",
  }
 
