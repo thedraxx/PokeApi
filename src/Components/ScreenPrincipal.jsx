@@ -6,10 +6,13 @@ export const ScreenPrincipal = () => {
   const [pokemon, setPokemon] = useState([]);
   const [active, setActive] = useState(false);
   const [search, setSearch] = useState({});
+  const [isLoading, setIsLoading] = useState(false);
+
   return (
     <div>
-      <Search setSearch={setSearch} />
+      <Search setSearch={setSearch} setIsLoading={setIsLoading} />
       <Consulta
+        isLoading={isLoading}
         search={search}
         setPokemon={setPokemon}
         pokemon={pokemon}

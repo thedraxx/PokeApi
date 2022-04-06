@@ -8,16 +8,14 @@ export const DIV = styled.div`
   margin-left: 5vh;
 
   @media (max-width: 900px) {
-  display: flex; 
-  justify-content: center;
-  flex-wrap: wrap;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
   }
-
 `;
 
 export const NAV = styled.div`
-
-  background-color: #F24A72;
+  background-color: #f24a72;
   color: white;
   text-align: center;
   padding: 2rem;
@@ -26,25 +24,41 @@ export const NAV = styled.div`
   border-radius: 13px;
 `;
 
-
 export const H5 = styled.div`
   text-align: center;
   color: white;
 `;
 
-
 //Component Search
 export const FORM = styled.form`
- display: inline-block;
+  display: inline-block;
   position: relative;
-  width: 100%; 
+  width: 100%;
   margin: 0px auto;
   text-align: center;
 `;
 
-
 export const INPUT = styled.input`
-border-radius: 5px;
-margin: 5px;
-
+  border-radius: 5px;
+  margin: 5px;
 `;
+
+export const containercard = {
+  width: "18rem",
+  backgroundColor: "#fdfdfd",
+  boxShadow: "1.5px 3px 7px black",
+  background:
+    "linear-gradient(150deg, rgba(2,0,36,1) 0%, #ffffff 0%, #ffcd95 100%)",
+  borderRadius: "40px",
+};
+
+export const datas = {
+  width: "18rem",
+  backgroundColor: "#ffecce",
+  boxShadow: "1px 3px 7px black",
+  textShadow: "1px 1px 1px black",
+};
+
+export const cardtitle = {
+  color: "#fff",
+};

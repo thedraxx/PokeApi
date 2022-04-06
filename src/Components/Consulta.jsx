@@ -3,7 +3,7 @@ import { helpHttp } from "../Components/helpers/helphttp";
 import { MostrarPokemons } from "./MostrarPokemons";
 import { Loader } from "./Loader";
 
-export const Consulta = ({ pokemon, setPokemon, active, setActive,search }) => {
+export const Consulta = ({ pokemon, setPokemon, active, setActive,search, isLoading }) => {
 
   useEffect(() => {
     setActive(true);
@@ -26,7 +26,7 @@ export const Consulta = ({ pokemon, setPokemon, active, setActive,search }) => {
   return (
     <div>
       {active && <Loader />}
-      <MostrarPokemons pokemon={pokemon} search={search} />
+      <MostrarPokemons pokemon={pokemon} search={search} isLoading={isLoading} />
     </div>
   );
 };
