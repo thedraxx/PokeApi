@@ -3,13 +3,12 @@ import { helpHttp } from "../Components/helpers/helphttp";
 import { MostrarPokemons } from "./MostrarPokemons";
 import { Loader } from "./Loader";
 
-export const Consulta = ({ pokemon, setPokemon, active, setActive }) => {
-  const [loading, setLoading] = useState(false);
+export const Consulta = ({ pokemon, setPokemon, active, setActive,search }) => {
 
   useEffect(() => {
-    setLoading(true);
+    setActive(true);
     const fetchData = async () => {
-      let pokeApi = `https://pokeapi.co/api/v2/pokemon?limit=50&offset=200`;
+      let pokeApi = `https://pokeapi.co/api/v2/pokemon?limit=100&offset=200`;
       const pokedata = await Promise.resolve(helpHttp().get(pokeApi));
       const get = await Promise.all(
         pokedata.results.map(async (e) => {
@@ -18,7 +17,7 @@ export const Consulta = ({ pokemon, setPokemon, active, setActive }) => {
         })
       );
       setPokemon(get);
-      setLoading(false);
+      setActive(false);
     };
 
     fetchData();
@@ -26,8 +25,8 @@ export const Consulta = ({ pokemon, setPokemon, active, setActive }) => {
 
   return (
     <div>
-      {loading && <Loader />}
-      <MostrarPokemons pokemon={pokemon} />
+      {active && <Loader />}
+      <MostrarPokemons pokemon={pokemon} search={search} />
     </div>
   );
 };

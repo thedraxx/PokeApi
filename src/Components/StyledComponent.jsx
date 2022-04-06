@@ -4,7 +4,8 @@ export const DIV = styled.div`
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   grid-gap: 1em;
-  margin-top: 15vh;
+  margin-top: 5vh;
+  margin-left: 5vh;
 
   @media (max-width: 900px) {
   display: flex; 
@@ -29,6 +30,21 @@ export const NAV = styled.div`
 export const H5 = styled.div`
   text-align: center;
   color: white;
+`;
 
+
+//Component Search
+export const FORM = styled.form`
+ display: inline-block;
+  position: relative;
+  width: 100%; 
+  margin: 0px auto;
+  text-align: center;
+`;
+
+
+export const INPUT = styled.input`
+border-radius: 5px;
+margin: 5px;
 
 `;

@@ -2,7 +2,8 @@ import React from "react";
 import { DIV, H5, IMG } from "./StyledComponent";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Card, Button } from "react-bootstrap";
-export const MostrarPokemons = ({ pokemon }) => {
+import { Busqueda } from "./Busqueda";
+export const MostrarPokemons = ({ pokemon,search }) => {
  
  
  const containercard ={
@@ -26,8 +27,8 @@ const cardtitle ={
  
   return (
     <DIV>
+      {<Busqueda search={search} pokemon={pokemon} />}
       {pokemon.map((e) => {
-        console.log(e)
         return (
           <section key={e.id}>
             <Card style={containercard}>
@@ -39,7 +40,7 @@ const cardtitle ={
                   <H5>id: {(e.id)}</H5>
                   <H5>weight: {(e.weight)}</H5>
                 </Card.Text>
-                <Button variant="primary">Go somewhere</Button>
+                {/* <Button variant="primary">Go somewhere</Button> */}
               </Card.Body>
             </Card>
           </section>
