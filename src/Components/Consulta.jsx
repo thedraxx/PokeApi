@@ -8,7 +8,7 @@ export const Consulta = ({ pokemon, setPokemon, active, setActive,search, isLoad
   useEffect(() => {
     setActive(true);
     const fetchData = async () => {
-      let pokeApi = `https://pokeapi.co/api/v2/pokemon?limit=100&offset=200`;
+      let pokeApi = `https://pokeapi.co/api/v2/pokemon?limit=150&offset=200`;
       const pokedata = await Promise.resolve(helpHttp().get(pokeApi));
       const get = await Promise.all(
         pokedata.results.map(async (e) => {

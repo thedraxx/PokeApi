@@ -1,15 +1,16 @@
 import React from "react";
 import { Card } from "react-bootstrap";
+import { Message } from "./Message";
 import { cardtitle, containercard, datas, DIV, H5 } from "./StyledComponent";
 
 export const Busqueda = ({ search, pokemon }) => {
   let PokeFilter = pokemon.filter(
     (e) => e.name === search.nombre.toLowerCase().trim()
   );
-
+    console.log(PokeFilter.length);
   return (
     <DIV>
-      {PokeFilter.map((e) => {
+      {PokeFilter.length === 0 ? <Message msg="Pokemon no encontrado" bgColor="#f24a72"/> : PokeFilter.map((e) => {
         return (
           <section key={e.id}>
             <Card style={containercard}>
