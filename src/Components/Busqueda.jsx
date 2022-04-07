@@ -1,7 +1,8 @@
+import "../App.css";
 import React from "react";
 import { Card } from "react-bootstrap";
 import { Message } from "./Message";
-import { cardtitle, containercard, datas, DIV, H5 } from "./StyledComponent";
+import { DIV, H5 } from "./StyledComponent";
 
 export const Busqueda = ({ search, pokemon }) => {
   let PokeFilter = pokemon.filter(
@@ -13,10 +14,10 @@ export const Busqueda = ({ search, pokemon }) => {
       {PokeFilter.length === 0 ? <Message msg="Pokemon no encontrado" bgColor="#f24a72"/> : PokeFilter.map((e) => {
         return (
           <section key={e.id}>
-            <Card style={containercard}>
+            <Card className="containercard">
               <Card.Img variant="top" src={e.sprites.front_default} />
-              <Card.Body style={datas}>
-                <Card.Title className="text-center" style={cardtitle}>
+              <Card.Body className="datas">
+                <Card.Title className="text-center text-light">
                   {e.name.toUpperCase()}
                 </Card.Title>
                 <Card.Text>

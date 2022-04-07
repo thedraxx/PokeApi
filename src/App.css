@@ -6,3 +6,20 @@
   -moz-osx-font-smoothing: grayscale;
   margin: 0;
 }
+
+.containercard{
+  width: 18rem;
+  background-Color: #fdfdfd;
+  box-Shadow: 1.5px 3px 7px black;
+  background:linear-gradient(150deg, rgba(2,0,36,1) 0%, #ffffff 0%, #ffcd95 100%);
+  border-Radius: 40px;
+  cursor: pointer;
+}
+
+.datas {
+  width: 18rem;
+  background-Color: #ffecce;
+  box-Shadow: 1px 3px 7px black;
+  text-Shadow: 1px 1px 1px black;
+};
+

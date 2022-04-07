@@ -31,6 +31,7 @@ export const H5 = styled.div`
 
 //Component Search
 export const FORM = styled.form`
+
   display: inline-block;
   position: relative;
   width: 100%;
@@ -40,25 +41,13 @@ export const FORM = styled.form`
 
 export const INPUT = styled.input`
   border-radius: 5px;
-  margin: 5px;
+  margin: 7px;
+  background-color: white;
+  text-decoration: none;
+  text-shadow: none;
+  border: 1px solid #bebebe;
+  padding: 10px;
+  font-size: 1rem;
+
 `;
 
-export const containercard = {
-  width: "18rem",
-  backgroundColor: "#fdfdfd",
-  boxShadow: "1.5px 3px 7px black",
-  background:
-    "linear-gradient(150deg, rgba(2,0,36,1) 0%, #ffffff 0%, #ffcd95 100%)",
-  borderRadius: "40px",
-};
-
-export const datas = {
-  width: "18rem",
-  backgroundColor: "#ffecce",
-  boxShadow: "1px 3px 7px black",
-  textShadow: "1px 1px 1px black",
-};
-
-export const cardtitle = {
-  color: "#fff",
-};

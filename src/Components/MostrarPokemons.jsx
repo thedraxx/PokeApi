@@ -1,5 +1,6 @@
+import "../App.css";
 import React from "react";
-import { cardtitle, containercard, datas, DIV, H5, IMG } from "./StyledComponent";
+import {DIV, H5 } from "./StyledComponent";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Card } from "react-bootstrap";
 import { Busqueda } from "./Busqueda";
@@ -13,10 +14,10 @@ export const MostrarPokemons = ({ pokemon, search, isLoading }) => {
         pokemon.map((e) => {
           return (
             <section key={e.id}>
-              <Card style={containercard}>
+              <Card className="containercard">
                 <Card.Img variant="top" src={e.sprites.front_default} />
-                <Card.Body style={datas}>
-                  <Card.Title className="text-center" style={cardtitle}>
+                <Card.Body className="datas">
+                  <Card.Title className="text-center text-light" >
                     {e.name.toUpperCase()}
                   </Card.Title>
                   <Card.Text>
