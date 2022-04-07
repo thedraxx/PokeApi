@@ -4,8 +4,8 @@ export const DIV = styled.div`
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   grid-gap: 1em;
-  margin-top: 5vh;
-  margin-left: 5vh;
+  margin-top: 4vh;
+  margin-left: 0vh;
 
   @media (max-width: 900px) {
     display: flex;
